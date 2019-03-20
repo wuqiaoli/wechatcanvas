@@ -1,15 +1,12 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs"
   ],
-  "usingComponents": {
-    "i-button": "dist/button/index"
-  },
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff5000",
+    "navigationBarTitleText": "斗图无极限",
+    "navigationBarTextStyle": "white"
   }
 }

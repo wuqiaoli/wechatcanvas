@@ -1,14 +1,23 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class="wrap">
+    <image class="img" data-src="{{item.src}}" src="{{item.src}}" alt="" wx:for="{{list}}" wx:for-item="item" bindtap="getImg" wx:key="{{item.id}}"/>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <canvas class="canvas" canvas-id="firstCanvas"></canvas>
+
+
+  <view class="section">
+    <input placeholder="请输入文字" focus="{{focus}}" bindinput="bindKeyInput"/>
   </view>
-<i-button type="primary" bind:click="handleClick">这是一个按钮</i-button>  
+
+<button
+  class="btn"
+  type="primary"
+  bindtap="addText"
+  hover-class="other-button-hover"
+>
+  点击添加文字
+</button>
+
+
 </view>
